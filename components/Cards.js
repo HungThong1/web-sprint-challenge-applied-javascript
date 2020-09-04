@@ -59,13 +59,13 @@ function cardMaker(cardObj){
     const author = document.createElement("div");
     const imageCont = document.createElement("div");
     const image = document.createElement("img");
-    const By = document.createElement("span");
+    const by = document.createElement("span");
     //Structure
     card.appendChild(headline);
     card.appendChild(author);
     author.appendChild(imageCont);
+    author.appendChild(by);
     imageCont.appendChild(image);
-    author.appendChild(By);
     //Class
     card.classList.add("card");
     headline.classList.add("headline");
@@ -74,8 +74,7 @@ function cardMaker(cardObj){
     //Text
     image.src = cardObj.authorPhoto
     headline.textContent = cardObj.headline
-    author.textContent = cardObj.authorName
-    By.textContent = "By " + author
+    by.textContent = "By " + cardObj.authorName
     //click
     card.addEventListener("click", event =>{
         console.log(headline);
